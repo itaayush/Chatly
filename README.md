@@ -28,7 +28,7 @@ Perfect for teams, communities, and individuals who want to stay connected in re
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/itaayush/chatly.git
+git clone https://github.com/itaayush/Chatly.git
 cd chatly
 ```
 
