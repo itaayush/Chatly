@@ -6,12 +6,17 @@ import User from "../models/user.model.js";
 
 dotenv.config();
 
+const isProduction = process.env.NODE_ENV === "production";
+const clientUrl = isProduction
+  ? process.env.CLIENT_URL
+  : "http://localhost:5173";
+
 const app = express();
 const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: process.env.CLIENT_URL || "http://localhost:5173",
+    origin: clientUrl,
     credentials: true,
   },
 });

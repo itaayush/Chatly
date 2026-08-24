@@ -16,6 +16,9 @@ dotenv.config();
 
 const PORT = process.env.PORT || 5001;
 const isProduction = process.env.NODE_ENV === "production";
+const clientUrl = isProduction
+  ? process.env.CLIENT_URL
+  : "http://localhost:5173";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const frontendDistPath = path.resolve(__dirname, "../../frontend/dist");
@@ -25,7 +28,7 @@ app.use(express.urlencoded({ limit: "100mb", extended: true }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "http://localhost:5173",
+    origin: clientUrl,
     credentials: true,
   })
 );
