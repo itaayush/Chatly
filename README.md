@@ -23,7 +23,7 @@ Perfect for teams, communities, and individuals who want to stay connected in re
 - **State Management:** Zustand
 - **Authentication:** JWT (JSON Web Token)
 
-## Getting Started
+## Local Development
 
 ### 1. Clone the Repository
 
@@ -48,10 +48,10 @@ npm install
 
 ### 3. Setup Environment Variables
 
-Create a `.env` file in the `backend` folder with the following example:
+Create `backend/.env` using `backend/.env.example` as a template:
 
 ```
-PORT=5000
+PORT=5001
 MONGODB_URI=mongodb://localhost:27017/chatly
 JWT_SECRET=your_jwt_secret_key_here
 CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
